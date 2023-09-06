@@ -1,0 +1,23 @@
+alter table StudentsDetail add  Photo varbinary(max) ;
+
+
+
+CREATE PROCEDURE SP_StudentDetail
+AS 
+BEGIN
+SELECT  * FROM StudentsDetail 
+END
+
+
+
+
+
+--insert--
+alter PROCEDURE SPI_StudentDetail
+@Name varchar(50),
+@Address varchar(60),
+@Photo varbinary(max)
+AS 
+BEGIN
+INSERT INTO StudentsDetail (Name,Address,Photo) VALUES (@Name,@Address,@Photo)
+END
